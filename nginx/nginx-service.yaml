@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx
+  labels:
+    run: my-nginx
+spec:
+  ports:
+  - port: 80 
+    protocol: TCP
+  externalIPs: 
+    - x.x.x.x
+  selector:
+    run: my-nginx
